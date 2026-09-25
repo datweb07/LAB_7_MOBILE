@@ -1,6 +1,7 @@
 package thanhdnh.ueh.edu.article_app;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +18,9 @@ public class ViewUserActivity extends AppCompatActivity {
     if (getSupportActionBar() != null) {
       getSupportActionBar().hide();
     }
+
+    Button backButton = findViewById(R.id.btn_back);
+    backButton.setOnClickListener(view -> finish());
 
     int userId = (int) getIntent().getLongExtra(MainActivity.EXTRA_USER_ID, -1);
     UserProfile user = MainActivity.getUserById(userId);

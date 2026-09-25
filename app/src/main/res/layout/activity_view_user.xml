@@ -11,71 +11,92 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="16dp">
 
-    <ImageView
-      android:id="@+id/iv_detail_avatar"
-      android:layout_width="match_parent"
-      android:layout_height="320dp"
-      android:contentDescription="@string/user_avatar"
-      android:scaleType="centerCrop"
-      android:src="@drawable/default_avatar" />
+    <Button
+      android:id="@+id/btn_back"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      android:text="@string/back"
+      android:textAllCaps="false" />
 
-    <TextView
-      android:id="@+id/tv_detail_user_name"
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:gravity="center"
-      android:paddingTop="20dp"
-      android:paddingBottom="16dp"
-      android:textColor="@color/black"
-      android:textSize="24sp"
-      android:textStyle="bold"
-      tools:text="Nguyễn Minh Anh" />
+      android:gravity="top"
+      android:orientation="horizontal">
 
-    <TextView
-      android:id="@+id/tv_detail_id"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:paddingBottom="8dp"
-      android:textColor="@color/black"
-      android:textSize="16sp"
-      tools:text="ID: 1" />
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <TextView
-      android:id="@+id/tv_detail_email"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:paddingBottom="8dp"
-      android:textColor="@color/black"
-      android:textSize="16sp"
-      tools:text="Email: minhanh@example.com" />
+        <TextView
+          android:id="@+id/tv_detail_user_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="16dp"
+          android:textColor="@color/black"
+          android:textSize="22sp"
+          android:textStyle="bold"
+          tools:text="Nguyễn Minh Anh" />
 
-    <TextView
-      android:id="@+id/tv_detail_hobbies"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:paddingBottom="16dp"
-      android:textColor="@color/black"
-      android:textSize="16sp"
-      tools:text="Sở thích: Du lịch, nhiếp ảnh, đọc sách" />
+        <TextView
+          android:id="@+id/tv_detail_id"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="8dp"
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          tools:text="ID: 1" />
 
-    <TextView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:paddingBottom="6dp"
-      android:text="@string/description_label"
-      android:textColor="@color/black"
-      android:textSize="16sp"
-      android:textStyle="bold" />
+        <TextView
+          android:id="@+id/tv_detail_email"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="8dp"
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          tools:text="Email: minhanh@example.com" />
 
-    <TextView
-      android:id="@+id/tv_detail_description"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:paddingBottom="24dp"
-      android:textColor="@color/black"
-      android:textSize="16sp"
-      tools:text="Mô tả người dùng" />
+        <TextView
+          android:id="@+id/tv_detail_hobbies"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="16dp"
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          tools:text="Sở thích: Du lịch, nhiếp ảnh, đọc sách" />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="6dp"
+          android:text="@string/description_label"
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tv_detail_description"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="24dp"
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          tools:text="Mô tả người dùng" />
+      </LinearLayout>
+
+      <ImageView
+        android:id="@+id/iv_detail_avatar"
+        android:layout_width="140dp"
+        android:layout_height="180dp"
+        android:contentDescription="@string/user_avatar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_avatar" />
+    </LinearLayout>
   </LinearLayout>
 </ScrollView>
