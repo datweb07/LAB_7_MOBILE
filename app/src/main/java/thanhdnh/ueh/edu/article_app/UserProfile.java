@@ -1,11 +1,31 @@
 package thanhdnh.ueh.edu.article_app;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class UserProfile {
+  @SerializedName("id")
+  @Expose
   private int id;
+
+  @SerializedName(value = "user_name", alternate = {"userName", "username"})
+  @Expose
   private String userName;
+
+  @SerializedName("email")
+  @Expose
   private String email;
+
+  @SerializedName(value = "description", alternate = {"desc"})
+  @Expose
   private String description;
+
+  @SerializedName(value = "avatar_url", alternate = {"avatarUrl"})
+  @Expose
   private String avatarUrl;
+
+  @SerializedName(value = "hobbies", alternate = {"hobies"})
+  @Expose
   private String hobbies;
 
   public UserProfile(int id, String userName, String email, String description,

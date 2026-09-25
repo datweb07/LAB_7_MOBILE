@@ -5,4 +5,6 @@
   <string name="email_value">Email: %1$s</string>
   <string name="hobbies_value">Sở thích: %1$s</string>
   <string name="description_label">Mô tả</string>
+  <!-- Thay YOUR_GITHUB_USERNAME và YOUR_GIST_ID bằng raw URL của Gist chứa users.json. -->
+  <string name="user_data_url" translatable="false">https://gist.githubusercontent.com/datweb07/e708b92074183c26152b893d1be72c91/raw/e9c16a8c4863a2befa740da2b06d6abfe9860959/users.json</string>
 </resources>

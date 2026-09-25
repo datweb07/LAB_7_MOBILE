@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class UserAdapter extends BaseAdapter {
@@ -48,20 +50,15 @@ public class UserAdapter extends BaseAdapter {
     }
 
     UserProfile user = getItem(position);
-    holder.avatar.setImageResource(resolveAvatar(user.getAvatarUrl()));
+    Picasso.get()
+        .load(user.getAvatarUrl())
+        .placeholder(R.drawable.default_avatar)
+        .error(R.drawable.default_avatar)
+        .fit()
+        .centerCrop()
+        .into(holder.avatar);
     holder.userName.setText(user.getUserName());
     return convertView;
-  }
-
-  private int resolveAvatar(String avatarUrl) {
-    String resourceName = avatarUrl;
-    if (resourceName.startsWith("@drawable/")) {
-      resourceName = resourceName.substring("@drawable/".length());
-    }
-
-    int resourceId = context.getResources().getIdentifier(
-        resourceName, "drawable", context.getPackageName());
-    return resourceId != 0 ? resourceId : R.drawable.default_avatar;
   }
 
   private static class ViewHolder {
