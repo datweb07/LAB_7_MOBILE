@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
     gridView = findViewById(R.id.gridview);
     new UserData(getBaseContext(), gridView).loadData(
-        getString(R.string.user_data_url), this);
+        "https://gist.githubusercontent.com/datweb07/e708b92074183c26152b893d1be72c91/raw/e4fcc45f79e4f79b7933d27bca2174385fc92c28/users.json",
+        this);
     gridView.setOnItemClickListener(onItemClick);
   }
 

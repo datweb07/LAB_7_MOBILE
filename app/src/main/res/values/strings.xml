@@ -6,6 +6,4 @@
   <string name="hobbies_value">Sở thích: %1$s</string>
   <string name="description_label">Mô tả</string>
   <string name="back">← Quay lại</string>
-  <!-- Thay YOUR_GITHUB_USERNAME và YOUR_GIST_ID bằng raw URL của Gist chứa users.json. -->
-  <string name="user_data_url" translatable="false">https://gist.githubusercontent.com/datweb07/e708b92074183c26152b893d1be72c91/raw/e4fcc45f79e4f79b7933d27bca2174385fc92c28/users.json</string>
 </resources>
